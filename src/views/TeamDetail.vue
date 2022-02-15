@@ -1,5 +1,14 @@
 <template>
-  <div></div>
+  <div>
+    <p>球団名</p>
+    {{ currentTeam.teamName }}
+    <p>本拠地</p>
+    {{ currentTeam.headquarters }}
+    <p>発足日</p>
+    {{ currentTeam.inauguration }}
+    <p>歴史</p>
+    {{ currentTeam.history }}
+  </div>
 </template>
 
 <script lang="ts">
