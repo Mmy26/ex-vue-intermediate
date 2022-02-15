@@ -96,5 +96,10 @@ export default new Vuex.Store({
   },
   mutations: {},
   actions: {},
+  getters: {
+    getTeam(state) {
+      return state.teams;
+    },
+  },
   modules: {},
 });
