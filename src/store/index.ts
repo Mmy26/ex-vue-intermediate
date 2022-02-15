@@ -100,6 +100,18 @@ export default new Vuex.Store({
     getTeam(state) {
       return state.teams;
     },
+    /**
+     * IDからチームを検索し返す.
+     *
+     * @param state - ステート
+     * @returns チーム情報
+     */
+    getTeamById(state) {
+      return (id: number) => {
+        const newTeams = state.teams.filter((team) => team.id === id);
+        return newTeams[0];
+      };
+    },
   },
   modules: {},
 });

@@ -23,7 +23,7 @@ export default class TeamDetail extends Vue {
    */
   created(): void {
     const teamId = Number(this.$route.params.id);
-    this.currentTeam = this.$store.getters.getTeamId(teamId);
+    this.currentTeam = this.$store.getters.getTeamById(teamId);
   }
 }
 </script>
