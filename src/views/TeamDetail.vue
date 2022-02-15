@@ -30,13 +30,15 @@ export default class TeamDetail extends Vue {
   private history = "";
 
   /**
-   * VuexストアのGetter経由で受け取ったリクエストパラメーターのIDから１件のチーム情報を取得する
+   * VuexストアのGetter経由で受け取ったリクエストパラメーターのIDから１件のチーム情報を取得する.
    */
   created(): void {
     const teamId = Number(this.$route.params.id);
     this.currentTeam = this.$store.getters.getTeamById(teamId);
-    this.inauguration = this.$store.getters.getTeamInauguration(teamId);
   }
+  /**
+   * ボタンを押すと、一覧画面に遷移する.
+   */
   onclick(): void {
     location.href = "/TeamList";
   }
