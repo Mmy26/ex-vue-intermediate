@@ -1,13 +1,14 @@
 <template>
   <div>
     <p>球団名</p>
-    {{ currentTeam.teamName }}
+    <p>{{ currentTeam.teamName }}</p>
     <p>本拠地</p>
-    {{ currentTeam.headquarters }}
+    <p>{{ currentTeam.headquarters }}</p>
     <p>発足日</p>
-    {{ inauguration }}
+    <p>{{ inauguration }}</p>
     <p>歴史</p>
-    {{ currentTeam.history }}
+    <pre>{{ currentTeam.history }}</pre>
+    <br />
     <button v-on:click="onclick">戻る</button>
   </div>
 </template>
