@@ -8,6 +8,7 @@
     {{ inauguration }}
     <p>歴史</p>
     {{ currentTeam.history }}
+    <button v-on:click="onclick">戻る</button>
   </div>
 </template>
 
@@ -34,6 +35,9 @@ export default class TeamDetail extends Vue {
     const teamId = Number(this.$route.params.id);
     this.currentTeam = this.$store.getters.getTeamById(teamId);
     this.inauguration = this.$store.getters.getTeamInauguration(teamId);
+  }
+  onclick(): void {
+    location.href = "/TeamList";
   }
 }
 </script>
