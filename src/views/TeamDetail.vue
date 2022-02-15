@@ -5,7 +5,7 @@
     <p>本拠地</p>
     {{ currentTeam.headquarters }}
     <p>発足日</p>
-    {{ currentTeam.inauguration }}
+    {{ inauguration }}
     <p>歴史</p>
     {{ currentTeam.history }}
   </div>
@@ -33,6 +33,7 @@ export default class TeamDetail extends Vue {
   created(): void {
     const teamId = Number(this.$route.params.id);
     this.currentTeam = this.$store.getters.getTeamById(teamId);
+    this.inauguration = this.$store.getters.getTeamInauguration(teamId);
   }
 }
 </script>

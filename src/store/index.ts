@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import Vue from "vue";
 import Vuex from "vuex";
 import { Team } from "/Users/Mmy_26/typescript-workspace/ex-vue-intermediate/src/types/Team";
@@ -110,6 +111,12 @@ export default new Vuex.Store({
       return (id: number) => {
         const newTeams = state.teams.filter((team) => team.id === id);
         return newTeams[0];
+      };
+    },
+    getTeamInauguration(state) {
+      return (id: number) => {
+        const team = state.teams.filter((team) => team.id === id)[0];
+        return format(team.inauguration, "yyyy年MM月dd日");
       };
     },
   },
