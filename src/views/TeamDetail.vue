@@ -1,0 +1,31 @@
+<template>
+  <div></div>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+import { Team } from "@/types/Team";
+@Component
+export default class TeamDetail extends Vue {
+  // 対象のチームオブジェクト
+  private currentTeam = new Team(0, "", "", new Date(), "");
+  // チーム名
+  private teamName = "";
+  // 本拠地
+  private headquarters = "";
+  // 発足日
+  private inauguration = new Date();
+  // 歴史
+  private history = "";
+
+  /**
+   * VuexストアのGetter経由で受け取ったリクエストパラメーターのIDから１件のチーム情報を取得する
+   */
+  created(): void {
+    const teamId = Number(this.$route.params.id);
+    this.currentTeam = this.$store.getters.getTeamId(teamId);
+  }
+}
+</script>
+
+<style scoped></style>
