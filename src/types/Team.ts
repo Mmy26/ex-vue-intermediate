@@ -1,11 +1,20 @@
+import { format } from "date-fns";
 export class Team {
   constructor(
+    // id
     private _id: number,
+    // 球団名
     private _teamName: string,
+    // 本拠地
     private _headquarters: string,
+    // 発足日
     private _inauguration: Date,
+    // 歴史
     private _history: string
   ) {}
+  get getInauguration(): string {
+    return format(this._inauguration, "yyyy年MM月dd日");
+  }
 
   public get id(): number {
     return this._id;

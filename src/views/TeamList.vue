@@ -15,7 +15,7 @@ import { Component, Vue } from "vue-property-decorator";
 @Component
 export default class TeamList extends Vue {
   /**
-   * Vuexストアのstausから野球チームの一覧情報を取得する
+   * Vuexストアのstausから野球チームの一覧情報を取得する.
    *
    * @returns チーム一覧
    */

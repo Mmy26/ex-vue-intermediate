@@ -5,7 +5,7 @@
     <p>本拠地</p>
     <p>{{ currentTeam.headquarters }}</p>
     <p>発足日</p>
-    <p>{{ currentTeam.inauguration }}</p>
+    <p>{{ currentTeam.getInauguration }}</p>
     <p>歴史</p>
     <pre>{{ currentTeam.history }}</pre>
     <br />
