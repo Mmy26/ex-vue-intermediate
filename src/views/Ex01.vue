@@ -16,6 +16,8 @@ import { Component, Vue } from "vue-property-decorator";
 export default class TeamList extends Vue {
   /**
    * Vuexストアのstausから野球チームの一覧情報を取得する
+   *
+   * @returns チーム一覧
    */
   get teams(): Array<void> {
     return this.$store.getters.getTeam;
